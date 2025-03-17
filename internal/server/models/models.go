@@ -3,10 +3,10 @@ package models
 import "time"
 
 type Phone struct {
-	TypeID      int
-	CountryCode int
-	Operator    int
-	Number      int
+	TypeID      int `json:"type_id"`
+	CountryCode int `json:"country_code"`
+	Operator    int `json:"operator"`
+	Number      int `json:"number"`
 }
 
 type Contact struct {
@@ -20,8 +20,8 @@ type Contact struct {
 }
 
 type Group struct {
-	ID          int
-	Title       string
-	Description string
-	Contacts    []int
+	ID          int    `json:"id"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Contacts    []int  `json:"contacts"`
 }

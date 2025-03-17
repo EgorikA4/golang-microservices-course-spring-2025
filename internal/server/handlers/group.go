@@ -12,8 +12,8 @@ func GetGroup(ctx *fiber.Ctx) error {
 	return ctx.JSON(models.Group{
 		ID:          1,
 		Title:       "test group",
-		Description: "group for test functionality",
-		Contacts:    []int{},
+		Description: "the group for testing functionality",
+		Contacts:    []int{1},
 	})
 }
 

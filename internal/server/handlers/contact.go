@@ -16,9 +16,16 @@ func GetContact(ctx *fiber.Ctx) error {
 		Username:   "Pety",
 		GivenName:  "Cheater",
 		FamilyName: "Moskovets",
-		Phones:     []models.Phone{},
-		Email:      []string{"petyMoscow@ya.ru"},
-		Birthdate:  birthdate,
+		Phones: []models.Phone{
+			{
+				TypeID:      1,
+				CountryCode: 7,
+				Operator:    983,
+				Number:      8032214,
+			},
+		},
+		Email:     []string{"petyMoscow@ya.ru"},
+		Birthdate: birthdate,
 	})
 }
 
