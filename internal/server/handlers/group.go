@@ -8,7 +8,7 @@ import (
 )
 
 func GetGroup(ctx *fiber.Ctx) error {
-    log.Println("Get Group")
+	log.Println("Get Group")
 	return ctx.JSON(models.Group{
 		ID:          1,
 		Title:       "test group",
@@ -18,18 +18,18 @@ func GetGroup(ctx *fiber.Ctx) error {
 }
 
 func CreateGroup(ctx *fiber.Ctx) error {
-    log.Println("Create Group")
+	log.Println("Create Group")
 	var group models.Group
 	return ctx.BodyParser(&group)
 }
 
 func UpdateGroup(ctx *fiber.Ctx) error {
-    log.Println("Update Group")
+	log.Println("Update Group")
 	var group models.Group
 	return ctx.BodyParser(&group)
 }
 
 func DeleteGroup(ctx *fiber.Ctx) error {
-    log.Println("Delete Group")
+	log.Println("Delete Group")
 	return ctx.SendString("Group was successfully deleted!")
 }

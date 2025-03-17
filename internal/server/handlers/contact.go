@@ -9,7 +9,7 @@ import (
 )
 
 func GetContact(ctx *fiber.Ctx) error {
-    log.Println("Get Contact")
+	log.Println("Get Contact")
 	birthdate, _ := time.Parse("02-01-2006", "10-10-2006")
 	return ctx.JSON(models.Contact{
 		ID:         1,
@@ -23,18 +23,18 @@ func GetContact(ctx *fiber.Ctx) error {
 }
 
 func CreateContact(ctx *fiber.Ctx) error {
-    log.Println("Create Contact")
+	log.Println("Create Contact")
 	var contact models.Contact
 	return ctx.BodyParser(&contact)
 }
 
 func UpdateContact(ctx *fiber.Ctx) error {
-    log.Println("Update Contact")
+	log.Println("Update Contact")
 	var contact models.Contact
 	return ctx.BodyParser(&contact)
 }
 
 func DeleteContact(ctx *fiber.Ctx) error {
-    log.Println("Delete Contact")
+	log.Println("Delete Contact")
 	return ctx.SendString("Contact was successfully deleted!")
 }
